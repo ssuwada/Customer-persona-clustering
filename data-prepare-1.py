@@ -46,22 +46,15 @@ def prepareData(filename):
 
     df = pd.read_excel(filename)
     print(df)
-    # Get all columns from DataFrame
-    columns = df.columns
-    #print(columns)
-    # Identify columns that end with "_Rating"
-    rating_columns = [col for col in columns if col.endswith("_Rating")]
-    #print(rating_columns)
 
-    # Find the corresponding prefix columns (without "_Rating")
-    prefixes = {col.rsplit("_", 1)[0] for col in rating_columns}
+    # Filter to keep only columns that end with '_Rating'
+    rating_columns = [col for col in df.columns if col.endswith('_Rating')]
+    print(rating_columns)
     
-    # Keep columns that either are in the prefixes set and end with "_Rating"
-    columns_to_keep = [col for col in columns if col in rating_columns or col.split("_Rating")[0] in prefixes]
-    
-    # Create a new DataFrame with the filtered columns
-    filtered_df = df[columns_to_keep]
-    print(filtered_df[5:10])
+    # Create a new DataFrame with only these columns
+    filtered_df = df[rating_columns]
+
+    filtered_df.to_csv("filtered_output.csv", index=False)
 
     return 
 
