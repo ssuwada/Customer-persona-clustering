@@ -89,10 +89,17 @@ segemtns = read_csvs(filename, 6)
 # Define cluster sizes for each segments based on Elbow Method
 # plot_elbow_method(segemtns, 10)
 
-Cluster_segment1, centers, reduced_features = cluster_segment(segemtns[2], 3)
 
-plot_clusters(Cluster_segment1, centers, reduced_features)
+# Get clusters
 
-Cluster_segment1, centers, reduced_features = cluster_segment(segemtns[2], 2)
+for i in range(len(segemtns)):
+    Cluster_segment, centers, reduced_features = cluster_segment(segemtns[i], 3)
+    # plot_clusters(Cluster_segment1, centers, reduced_features)
+    segemtns[i]['Cluster'] = Cluster_segment['Cluster']
 
-plot_clusters(Cluster_segment1, centers, reduced_features)
+# Print the 'Cluster' column for each segment
+for i in range(len(segemtns)):
+    print(f"Segment {i + 1} Clusters:")
+    print(segemtns[i]['Cluster'])
+
+print(segemtns[0].head())
