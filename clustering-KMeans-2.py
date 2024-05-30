@@ -20,8 +20,10 @@ import pandas as pd
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
 
+# Read created csv files from data-preparation file
 def read_csvs(filename, segments_numb):
 
     segments = []
@@ -45,6 +47,7 @@ def WCSS(segment, max_clusters):
         # Inertia = Σ(distance(point, centroid)^2)
     return wcss
 
+# Elbow Metehod - defines number of clusters
 def plot_elbow_method(segments, max_clusters):
 
     for j in range(len(segments)):
@@ -57,15 +60,38 @@ def plot_elbow_method(segments, max_clusters):
         plt.legend()
         plt.show()
 
+# Create a function to perform PCA and retain the necessary components
+def ThresholdPcaRetain(segment, thresholdExplainedVariance):
+    
+    num_components_to_retain = []
+
+    for i in range(len(segemtns)):
+        # Standardize the segment data
+        scaler = StandardScaler()
+        segment_scaled = scaler.fit_transform(segment[i])
+        
+        # Perform PCA to obtain number of components to retain
+        pca = PCA()
+        princComponents = pca.fit_transform(segment_scaled)
+        
+        # Calculate cumulative explained variance
+        cumulative_explained_variance = pca.explained_variance_ratio_.cumsum()
+        
+        # Determine the number of components to retain
+        num_components = next(i for i, total_variance in enumerate(cumulative_explained_variance) if total_variance >= thresholdExplainedVariance) + 1
+        num_components_to_retain.append(num_components)
+
+    return num_components_to_retain
+
 # Function to perform K-means clustering on a segment
-def cluster_segment(segment, n_clusters):
+def cluster_segment(segment, n_clusters, ColumnName, n_components):
     features = segment.drop(columns=['Consumer-ID'])
-    reduced_features = apply_pca(features, n_components=2)
+    reduced_features = apply_pca(features, n_components)
     kmeans = KMeans(n_clusters=n_clusters, random_state=0)
-    segment['Cluster'] = kmeans.fit_predict(reduced_features)
+    segment[ColumnName] = kmeans.fit_predict(reduced_features)
     return segment, kmeans.cluster_centers_, reduced_features
 
-
+# Create plots of clusters based on reduced features created by PCA (transform clusters to 2D) - reduce dimensionality
 def plot_clusters(segment, cluster_centers, reduced_features):
     plt.figure(figsize=(10, 8))
     scatter = plt.scatter(reduced_features[:, 0], reduced_features[:, 1], c=segment['Cluster'], cmap='viridis', marker='o')
@@ -76,11 +102,40 @@ def plot_clusters(segment, cluster_centers, reduced_features):
     plt.legend(*scatter.legend_elements(), title="Clusters")
     plt.show()
 
-# Function to perform PCA and reduce dimensions
-def apply_pca(features, n_components=2):
+# Function to perform PCA and reduce dimensions based on previous threshold (90%)
+def apply_pca(features, n_components):
+    # Standardize the segment data
+    scaler = StandardScaler()
+    segment_scaled = scaler.fit_transform(features)
+
+    # Perfomr PCA on scaled data for each segment
     pca = PCA(n_components=n_components)
-    reduced_features = pca.fit_transform(features)
+    reduced_features = pca.fit_transform(segment_scaled)
+
     return reduced_features
+
+# Get clusters using KMeans
+def segments_assign_centers(segemtns, clusterSizeVector, ColumnName, reductionVector):
+
+    for i in range(len(segemtns)):
+        Cluster_segment, centers, reduced_features = cluster_segment(segemtns[i], clusterSizeVector[i], ColumnName, reductionVector[i])
+        # plot_clusters(Cluster_segment, centers, reduced_features)
+        segemtns[i]['Cluster'] = Cluster_segment['Cluster']
+        segemtns[i]['Cluster-segment-center-x'] = Cluster_segment['Cluster']
+        segemtns[i]['Cluster-segment-center-y'] = Cluster_segment['Cluster']
+
+        for j in range(len(segemtns[i]['Cluster'])):
+            cluster_index = segemtns[i]['Cluster'][j]
+            segemtns[i].loc[j, 'Cluster-segment-center-x'] = centers[cluster_index][0]
+            segemtns[i].loc[j, 'Cluster-segment-center-y'] = centers[cluster_index][1]
+
+        print(segemtns[i].head())
+
+    return segemtns
+
+
+## MAIN
+
 
 filename = '/Users/sebastiansuwada/Desktop/HTB/McsThesis/Code-Thesis/Customer-persona-clustering/S{}.csv'
 segemtns = read_csvs(filename, 6) 
@@ -89,17 +144,21 @@ segemtns = read_csvs(filename, 6)
 # Define cluster sizes for each segments based on Elbow Method
 # plot_elbow_method(segemtns, 10)
 
+# Create Vector - reductionVector what stores number of 90% components that can retain based on Cumulative Explained Variance
+reductionVector = ThresholdPcaRetain(segemtns, 0.9)
+print(reductionVector)
 
-# Get clusters
+## DEFINE VECTOR of Clusters for each segment for example: [3,3,2,3,3]
+# It should be done based on elbow Method
+clusterSizeVector = [3,3,3,3,3]
 
-for i in range(len(segemtns)):
-    Cluster_segment, centers, reduced_features = cluster_segment(segemtns[i], 3)
-    # plot_clusters(Cluster_segment1, centers, reduced_features)
-    segemtns[i]['Cluster'] = Cluster_segment['Cluster']
+# Define name of new column in dataFrame for Cluster number
+ColumnName='Cluster'
 
-# Print the 'Cluster' column for each segment
-for i in range(len(segemtns)):
-    print(f"Segment {i + 1} Clusters:")
-    print(segemtns[i]['Cluster'])
+## Perform clustering based on Size of Clusers defined by Elbow method
+# reductionVector defined by PCA and Cumulative Explained Variance results
+segments = segments_assign_centers(segemtns, clusterSizeVector, ColumnName, reductionVector)
 
-print(segemtns[0].head())
+# print(segments)
+
+
