@@ -21,6 +21,8 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import silhouette_score
+
 
 
 # Read created csv files from data-preparation file
@@ -133,24 +135,84 @@ def segments_assign_centers(segemtns, clusterSizeVector, ColumnName, reductionVe
 
     return segemtns
 
+## Centers of cluster segments to one DF
+def listForCentersCluster(segments):
+    df = pd.DataFrame()
+    lista = []
+    for i in range(len(segments)):
+        segment = segments[i]
+        temp = []
+        for j in range(len(segment)):
+            temp = [segment['Cluster-segment-center-x'][j], segment['Cluster-segment-center-y'][j]]
+            print(temp)
+            # df['SegmentCenter-'+str(i)] = temp
+            lista.append(temp)
+        # df['SegmentCenter-Y'+str(i)] = segment['Cluster-segment-center-y']
+    
+    return lista
+
+# Function to perform K-means clustering on a segment
+def FinalKMeans(lista, n_clusters):
+    segment = pd.DataFrame()
+    kmeans = KMeans(n_clusters=n_clusters, random_state=0)
+    segment['FinalCluster'] = kmeans.fit_predict(lista)
+    print(segment)
+    return segment, kmeans.cluster_centers_
+
+# Function to plot the elbow curve
+def plot_elbowv2(data, max_clusters):
+    distortions = []
+    K = range(1, max_clusters+1)
+    for k in K:
+        kmeans = KMeans(n_clusters=k, random_state=0)
+        kmeans.fit(data)
+        distortions.append(kmeans.inertia_)
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(K, distortions, 'bx-')
+    plt.xlabel('Number of clusters')
+    plt.ylabel('Distortion')
+    plt.title('Elbow Method For Optimal Number of Clusters')
+    plt.show()
+
+def calculate_silhouette_scores(segments, max_clusters=10):
+    
+    for i in range(len(segemtns)):
+
+        silhouette_scores = []
+
+        for Numberclusters in range(2, max_clusters + 1):
+            kmeans = KMeans(n_clusters=Numberclusters, random_state=0)
+            cluster_labels = kmeans.fit_predict(segments[i])
+            silhouette_avg = silhouette_score(segments[i], cluster_labels)
+            silhouette_scores.append(silhouette_avg)
+        print(silhouette_scores)
+
+        plt.plot(range(2, 11), silhouette_scores, marker='o')
+        plt.xlabel('Number of clusters')
+        plt.ylabel('Silhouette Score')
+        plt.title('Silhouette Scores for different number of clusters')
+        plt.grid(True)
+        plt.show()
+
+    return silhouette_scores
 
 ## MAIN
-
 
 filename = '/Users/sebastiansuwada/Desktop/HTB/McsThesis/Code-Thesis/Customer-persona-clustering/S{}.csv'
 segemtns = read_csvs(filename, 6) 
 
 
-# Define cluster sizes for each segments based on Elbow Method
+# Define cluster sizes for each segments based on Elbow Method and Silhouette Scores
 # plot_elbow_method(segemtns, 10)
+# calculate_silhouette_scores(segemtns, 10)
 
 # Create Vector - reductionVector what stores number of 90% components that can retain based on Cumulative Explained Variance
-reductionVector = ThresholdPcaRetain(segemtns, 0.9)
-print(reductionVector)
+reductionVector = ThresholdPcaRetain(segemtns, 0.8)
 
 ## DEFINE VECTOR of Clusters for each segment for example: [3,3,2,3,3]
 # It should be done based on elbow Method
-clusterSizeVector = [3,3,3,3,3]
+clusterSizeVector = [2,2,2,2,2]
 
 # Define name of new column in dataFrame for Cluster number
 ColumnName='Cluster'
@@ -159,6 +221,24 @@ ColumnName='Cluster'
 # reductionVector defined by PCA and Cumulative Explained Variance results
 segments = segments_assign_centers(segemtns, clusterSizeVector, ColumnName, reductionVector)
 
-# print(segments)
 
 
+# Tu ponizej jest do poprawy, musze uwzglednic zeby bylo 205 r0w i 5 column z srodkami tych centrow
+lista = listForCentersCluster(segments)
+plot_elbowv2(lista,10)
+segment, cluster_centers = FinalKMeans(lista, 2)
+
+# Separate the points into X and Y coordinates
+x_coords = [point[0] for point in lista]
+y_coords = [point[1] for point in lista]
+
+plt.scatter(x_coords, y_coords, c=segment['FinalCluster'], cmap='viridis')
+plt.scatter(cluster_centers[:, 0], cluster_centers[:, 1], s=300, c='red', marker='x')  # Plot cluster centers
+plt.xlabel('X Coordinates')
+plt.ylabel('Y Coordinates')
+plt.title('Scatter Plot with Cluster Centers')
+plt.grid(True)
+plt.show()
+
+
+segment.to_csv(f'FinalCluster.csv', index=False)
