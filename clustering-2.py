@@ -26,6 +26,8 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn_extra.cluster import KMedoids
 from sklearn.cluster import AgglomerativeClustering
 from scipy.cluster.hierarchy import dendrogram, linkage
+import hypertools as hyp
+
 
 
 
@@ -109,11 +111,11 @@ def cluster_segment(segment, n_clusters, ColumnName, n_components):
     features = segment.drop(columns=['Consumer-ID'])
     reduced_features = apply_pca(features, n_components)
     print(reduced_features)
-    # plot_elbow_df(reduced_features,10)
+    plot_elbow_df(reduced_features,10)
     kmeans = KMeans(n_clusters=n_clusters, random_state=0)
     segment[ColumnName] = kmeans.fit_predict(reduced_features)
     print("Interia of clusters: %d" %(kmeans.inertia_))
-    # plot_clusters(segment, kmeans.cluster_centers_, reduced_features)
+    plot_clusters(segment, kmeans.cluster_centers_, reduced_features)
 
     return segment, kmeans.cluster_centers_, reduced_features
 
@@ -261,6 +263,24 @@ def calculate_silhouette_scores(segments, max_clusters=10):
 
     return silhouette_scores
 
+## CALCULATE Silhouette Scoress for one segment (can be used for calculation for whole data set)
+def silhouette_scoress(segment, max_clusters):
+        
+    silhouette_scores = []
+
+    for Numberclusters in range(2, max_clusters + 1):
+        kmeans = KMeans(n_clusters=Numberclusters, random_state=0)
+        cluster_labels = kmeans.fit_predict(segment)
+        silhouette_avg = silhouette_score(segment, cluster_labels)
+        silhouette_scores.append(silhouette_avg)
+        print(silhouette_scores)
+
+    plt.plot(range(2, 11), silhouette_scores, marker='o')
+    plt.xlabel('Number of clusters')
+    plt.ylabel('Silhouette Score')
+    plt.title('Silhouette Scores for different number of clusters')
+    plt.grid(True)
+    plt.show()
 
 ### PART 2 - Functions ###
 def combine_segments(segments, key='Consumer-ID'):
@@ -288,7 +308,7 @@ def ThresholdPcaRetain_singleSegment(segment, thresholdExplainedVariance):
         
         # Determine the number of components to retain
     num_components = next(i for i, total_variance in enumerate(cumulative_explained_variance) if total_variance >= thresholdExplainedVariance) + 1
-
+    print(len(segment))
     return num_components
 
 
@@ -378,7 +398,13 @@ def hierarchical_cluster(segment, n_clusters, n_components):
     print(labels)
 
 
-    plot_clusters(segment, 0, reduced_features)
+    # plot_clusters(segment, 0, reduced_features)
+
+    segment['Cluster'] = hierarchical.labels_
+    hyp.plot(features, '.', group=labels, reduce='TSNE', ndims=3, legend=['Cluster 0', 'Cluster 1'])
+    plt.show()
+
+    return segment
 
 
 
@@ -417,19 +443,23 @@ ColumnName='Cluster'
 ### PART ADDITIONALES ####
 # Create Clustering based on centers obtained from previous clustering!
 # # Transforming the DataFrame to long format
-centers = segments_assign_centers(segemtns, clusterSizeVector, ColumnName, reductionVector)
-dfCenters = dfForCentersCluster(centers)
-last_kmeans_general(dfCenters,2)
+
+# centers = segments_assign_centers(segemtns, clusterSizeVector, ColumnName, reductionVector)
+# dfCenters = dfForCentersCluster(centers)
+# last_kmeans_general(dfCenters,2)
 
 
 
 ## PART 2.1 ### - try clustering using all data - KMEANS
+
 combinedDF = combine_segments(segemtns, 'Consumer-ID')
 # plot_elbow_df(combinedDF,10)
 reductionNumber = ThresholdPcaRetain_singleSegment(combinedDF, 0.9)
-# ClusterinSingleSegment = cluster_segment(combinedDF, 4, ColumnName, reductionNumber)
+# print(reductionNumber)
 
+# ClusterinSingleSegment = cluster_segment(combinedDF, 2, ColumnName, reductionNumber)
 
+silhouette_scoress(combinedDF, 10)
 
 ### PART 3.1 - DBSCAN model for clusterin ###
 # PLOT K-DISTANCE
@@ -443,8 +473,16 @@ reduced_features = apply_pca(features, reductionNumber)
 
 ### PART 4.1 - MEDOIDS CLUSTERING
 
-# medoids_cluster(combinedDF, 3, reductionNumber)
+# medoids_cluster(combinedDF, 2, reductionNumber)
 
 ### PART 5.1 - HIERARCHICAL
 
-# hierarchical_cluster(combinedDF, 2, reductionNumber)
+HierdfCombined = hierarchical_cluster(combinedDF, 2, reductionNumber)
+
+sorted_df = HierdfCombined.sort_values(by='Cluster', ascending=False)
+print(sorted_df)
+
+counts = sorted_df['Cluster'].value_counts()
+print(counts)
+
+sorted_df.to_csv(f'SORTED.csv', index=False)
