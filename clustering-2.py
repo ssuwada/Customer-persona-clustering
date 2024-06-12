@@ -110,14 +110,14 @@ def ThresholdPcaRetain(segment, thresholdExplainedVariance):
 def cluster_segment(segment, n_clusters, ColumnName, n_components):
     features = segment.drop(columns=['Consumer-ID'])
     reduced_features = apply_pca(features, n_components)
-    print(reduced_features)
+    # print(reduced_features)
     plot_elbow_df(reduced_features,10)
     kmeans = KMeans(n_clusters=n_clusters, random_state=0)
     segment[ColumnName] = kmeans.fit_predict(reduced_features)
-    print("Interia of clusters: %d" %(kmeans.inertia_))
+    # print("Interia of clusters: %d" %(kmeans.inertia_))
     plot_clusters(segment, kmeans.cluster_centers_, reduced_features)
 
-    return segment, kmeans.cluster_centers_, reduced_features
+    return segment
 
 # Create plots of clusters based on reduced features created by PCA (transform clusters to 2D) - reduce dimensionality
 def plot_clusters(segment, cluster_centers, reduced_features):
@@ -453,15 +453,17 @@ ColumnName='Cluster'
 ## PART 2.1 ### - try clustering using all data - KMEANS
 
 combinedDF = combine_segments(segemtns, 'Consumer-ID')
+# print(combinedDF)
 # plot_elbow_df(combinedDF,10)
 reductionNumber = ThresholdPcaRetain_singleSegment(combinedDF, 0.9)
 # print(reductionNumber)
 
-# ClusterinSingleSegment = cluster_segment(combinedDF, 2, ColumnName, reductionNumber)
-
-silhouette_scoress(combinedDF, 10)
+ClusterinSingleSegment = cluster_segment(combinedDF, 2, ColumnName, reductionNumber)
+# print(ClusterinSingleSegment)
+# silhouette_scoress(combinedDF, 10)
 
 ### PART 3.1 - DBSCAN model for clusterin ###
+
 # PLOT K-DISTANCE
 features = combinedDF.drop(columns=['Consumer-ID'])
 reduced_features = apply_pca(features, reductionNumber)
@@ -477,12 +479,25 @@ reduced_features = apply_pca(features, reductionNumber)
 
 ### PART 5.1 - HIERARCHICAL
 
-HierdfCombined = hierarchical_cluster(combinedDF, 2, reductionNumber)
+# HierdfCombined = hierarchical_cluster(combinedDF, 2, reductionNumber)
 
-sorted_df = HierdfCombined.sort_values(by='Cluster', ascending=False)
-print(sorted_df)
+# SORT VALUES AND EXPORT FOR HIERRARCHICAL
 
-counts = sorted_df['Cluster'].value_counts()
-print(counts)
+# sorted_df = HierdfCombined.sort_values(by='Cluster', ascending=False)
+# print(sorted_df)
 
-sorted_df.to_csv(f'SORTED.csv', index=False)
+# counts = sorted_df['Cluster'].value_counts()
+# print(counts)
+
+# sorted_df.to_csv(f'SORTED.csv', index=False)
+
+
+# CREATE SORTED FILE FOR KMEANS CLUSTERING
+
+sorted_df2 = ClusterinSingleSegment.sort_values(by='Cluster', ascending=False)
+print(sorted_df2)
+
+counts2 = sorted_df2['Cluster'].value_counts()
+print(counts2)
+
+sorted_df2.to_csv(f'SORTEDkmeans.csv', index=False)
