@@ -17,6 +17,7 @@
 
 import numpy as np
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
@@ -68,4 +69,16 @@ sortedDfKmeans = readCSV(filename)
 # histogramPlot(sortedDf)
 
 print(sortedDfKmeans)
-histogramPlot(sortedDfKmeans)
+# histogramPlot(sortedDfKmeans)
+
+# Remove 'Consumer-ID' and 'Cluster' columns
+data_prepared = sortedDf.drop(columns=['Consumer-ID', 'Cluster'])
+data_normalized = (data_prepared - data_prepared.min()) / (data_prepared.max() - data_prepared.min())
+print(data_normalized)
+# Create the heat map
+plt.figure(figsize=(12, 10))
+sns.heatmap(data_normalized, cmap='coolwarm', cbar=True, yticklabels=sortedDf['Cluster'])
+plt.title('Heatmap of Survey Responses')
+plt.xlabel('Questions')
+plt.ylabel('Respondents')
+plt.show()

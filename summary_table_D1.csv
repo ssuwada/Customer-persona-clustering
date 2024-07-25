@@ -1,0 +1,47 @@
+Feature,Category,Number of Respondents,Percentage of the Sample
+OS-Mobile,iOS,106,51.96%
+OS-Mobile,Android,96,47.06%
+OS-Mobile,Nie wiem,2,0.98%
+Mobile-time,3-4,87,42.65%
+Mobile-time,1-2,48,23.53%
+Mobile-time,5-6,41,20.10%
+Mobile-time,<1,15,7.35%
+Mobile-time,7-8,9,4.41%
+Mobile-time,>8,4,1.96%
+Age,18-24,101,49.51%
+Age,25-30,31,15.20%
+Age,45-50,21,10.29%
+Age,51-55,13,6.37%
+Age,41-45,11,5.39%
+Age,31-35,11,5.39%
+Age,56-60,6,2.94%
+Age,36-40,6,2.94%
+Age,60-70,4,1.96%
+Education-level,Tytuł Inżyniera/Licencjat,85,41.67%
+Education-level,Wykształcenie średnie,59,28.92%
+Education-level,Tytuł Magistra,56,27.45%
+Education-level,Stopień naukowy Doktor,3,1.47%
+Education-level,Wykształcenie podstawowe,1,0.49%
+Maritial-status,Związek nieformalny,81,39.71%
+Maritial-status,Żonaty/Zamężna,60,29.41%
+Maritial-status,Wolny/a,60,29.41%
+Maritial-status,Po rozwodzie lub w separacji,3,1.47%
+Income,>10000 zł,51,25.00%
+Income,4001-6000 zł,44,21.57%
+Income,6001-8000 zł,34,16.67%
+Income,2001-4000 zł,33,16.18%
+Income,<2000 zł,24,11.76%
+Income,8001-10000 zł,18,8.82%
+Work-status,Praca na pełen etat,91,44.61%
+Work-status,Student,26,12.75%
+Work-status,"Praca na pół etatu, Student",22,10.78%
+Work-status,Własny biznes,19,9.31%
+Work-status,"Praca na pełen etat, Student",18,8.82%
+Work-status,Praca na pół etatu,12,5.88%
+Work-status,"Praca na pełen etat, Własny biznes",4,1.96%
+Work-status,"Bezrobotny, Student",4,1.96%
+Work-status,Bezrobotny,3,1.47%
+Work-status,"Student, Własny biznes",2,0.98%
+Work-status,"Praca na pół etatu, Własny biznes",1,0.49%
+Work-status,"Praca na pełen etat, Student, Własny biznes",1,0.49%
+Work-status,"Praca na pół etatu, Student, Własny biznes",1,0.49%

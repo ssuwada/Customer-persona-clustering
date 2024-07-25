@@ -184,6 +184,27 @@ def saveSegmentstoCSV(segments, segments_names):
     for segment, name in zip(segments, segments_names):
         segment.to_csv(f'{name}.csv', index=False)
 
+def demographicToCSV(D1):
+    """
+    Function: Save dataFrames into csv
+    Created: 2024-05-13
+    Last Modified: 2024-05-13
+
+    Description
+
+    Keywords:
+        data cleaning, data preparing, cleaning, database transform
+
+    Parameters:
+        data (DataFrame): Initial dataFrame cleanned by initialPrepareData()
+
+    Returns:
+        results (DataFrame): As results gives back dataFrame's of new prepared data with demographic 
+        informations
+    """
+
+    D1.to_csv(f'D1.csv', index=False)
+
 #   ---------  Main  ---------
 
 # Get data and make initial preparation
@@ -197,6 +218,8 @@ saveSegmentstoCSV(segments, segment_names)
 
 # Substract from main data, demographic informations
 D1 = getDemographicalData(df)
+demographicToCSV(D1)
+
 
 ## PCA ANALYSIS EXAMPLE BELOW
 

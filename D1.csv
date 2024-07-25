@@ -1,0 +1,205 @@
+Consumer-ID,OS-Mobile,Mobile-time,Age,Gender,Education-level,Maritial-status,Kids,Income,Work-status
+204,iOS,1-2,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,8001-10000 zł,Praca na pół etatu
+203,iOS,<1,45-50,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,2,4001-6000 zł,Praca na pełen etat
+202,Android,1-2,41-45,Mężczyzna,Tytuł Magistra,Wolny/a,0,>10000 zł,Praca na pełen etat
+201,iOS,7-8,25-30,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,>10000 zł,Własny biznes
+200,iOS,3-4,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,Praca na pełen etat
+199,Android,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,Praca na pełen etat
+198,Android,1-2,18-24,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,8001-10000 zł,Praca na pełen etat
+197,Android,1-2,18-24,Mężczyzna,Wykształcenie średnie,Wolny/a,0,4001-6000 zł,Praca na pełen etat
+196,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,6001-8000 zł,"Praca na pełen etat, Student"
+195,Android,5-6,18-24,Kobieta,Wykształcenie średnie,Związek nieformalny,0,2001-4000 zł,Praca na pełen etat
+194,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,>10000 zł,"Praca na pełen etat, Student"
+193,iOS,5-6,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,Student
+192,Android,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,Praca na pół etatu
+191,Android,3-4,25-30,Mężczyzna,Tytuł Magistra,Związek nieformalny,0,8001-10000 zł,Praca na pełen etat
+190,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,"Praca na pół etatu, Student"
+189,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,>10000 zł,Własny biznes
+188,Android,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,>10000 zł,Praca na pełen etat
+187,iOS,7-8,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,6001-8000 zł,"Praca na pół etatu, Student"
+186,iOS,5-6,18-24,Kobieta,Tytuł Magistra,Związek nieformalny,0,6001-8000 zł,Praca na pełen etat
+185,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,Student
+184,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,Student
+183,iOS,5-6,18-24,Kobieta,Tytuł Magistra,Związek nieformalny,0,<2000 zł,Bezrobotny
+182,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,6001-8000 zł,"Praca na pełen etat, Student"
+181,iOS,3-4,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,6001-8000 zł,Praca na pełen etat
+180,iOS,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,Praca na pełen etat
+179,iOS,1-2,18-24,Mężczyzna,Wykształcenie średnie,Wolny/a,0,<2000 zł,Student
+178,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,8001-10000 zł,"Praca na pełen etat, Własny biznes"
+177,Android,5-6,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,<2000 zł,"Bezrobotny, Student"
+176,iOS,5-6,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,2001-4000 zł,Student
+175,iOS,5-6,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,2001-4000 zł,Praca na pół etatu
+174,iOS,3-4,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,<2000 zł,Student
+173,iOS,7-8,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,4001-6000 zł,"Praca na pełen etat, Własny biznes"
+172,iOS,3-4,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,<2000 zł,Student
+171,iOS,<1,18-24,Mężczyzna,Wykształcenie podstawowe,Wolny/a,0,6001-8000 zł,Praca na pół etatu
+170,iOS,7-8,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,2001-4000 zł,Praca na pół etatu
+169,iOS,5-6,18-24,Kobieta,Wykształcenie średnie,Związek nieformalny,0,4001-6000 zł,"Praca na pełen etat, Student"
+168,Android,1-2,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,"Praca na pół etatu, Student"
+167,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Wolny/a,0,<2000 zł,"Praca na pół etatu, Student"
+166,Android,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,Student
+165,iOS,7-8,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,<2000 zł,Student
+164,iOS,3-4,25-30,Kobieta,Wykształcenie średnie,Związek nieformalny,0,6001-8000 zł,Własny biznes
+163,Android,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,<2000 zł,"Praca na pół etatu, Student"
+162,Android,1-2,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,"Praca na pół etatu, Student"
+161,iOS,7-8,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,<2000 zł,"Praca na pół etatu, Student"
+160,Android,3-4,18-24,Kobieta,Wykształcenie średnie,Związek nieformalny,0,<2000 zł,Student
+159,iOS,3-4,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,4001-6000 zł,"Praca na pełen etat, Student"
+158,Android,1-2,25-30,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,8001-10000 zł,Praca na pełen etat
+157,iOS,1-2,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,Praca na pełen etat
+156,Android,<1,56-60,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,2001-4000 zł,Praca na pełen etat
+155,iOS,3-4,25-30,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,Praca na pełen etat
+154,iOS,7-8,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,<2000 zł,"Praca na pół etatu, Student"
+153,iOS,3-4,25-30,Kobieta,Tytuł Magistra,Związek nieformalny,0,4001-6000 zł,Praca na pełen etat
+152,Android,3-4,51-55,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,1,6001-8000 zł,Praca na pełen etat
+151,Android,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,Praca na pół etatu
+150,iOS,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,<2000 zł,Student
+149,Android,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,Praca na pół etatu
+148,Android,5-6,18-24,Kobieta,Wykształcenie średnie,Związek nieformalny,0,2001-4000 zł,"Praca na pół etatu, Student"
+147,iOS,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,>10000 zł,"Praca na pełen etat, Student"
+146,iOS,5-6,25-30,Kobieta,Tytuł Magistra,Związek nieformalny,0,>10000 zł,Własny biznes
+145,iOS,5-6,18-24,Kobieta,Wykształcenie średnie,Związek nieformalny,0,2001-4000 zł,"Praca na pełen etat, Student"
+144,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,4001-6000 zł,"Praca na pełen etat, Student"
+143,Android,3-4,45-50,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,Praca na pełen etat
+142,iOS,3-4,25-30,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,Praca na pełen etat
+141,Android,1-2,45-50,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+140,iOS,5-6,51-55,Kobieta,Tytuł Magistra,Żonaty/Zamężna,3,>10000 zł,Praca na pełen etat
+139,Android,1-2,31-35,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,8001-10000 zł,Praca na pełen etat
+138,Android,1-2,41-45,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,4001-6000 zł,Praca na pełen etat
+137,Android,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,<2000 zł,"Bezrobotny, Student"
+136,iOS,3-4,31-35,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,8001-10000 zł,Praca na pełen etat
+135,Android,<1,51-55,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,1,6001-8000 zł,Praca na pół etatu
+134,Android,5-6,36-40,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,6001-8000 zł,Praca na pełen etat
+133,Android,3-4,31-35,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,6001-8000 zł,Praca na pełen etat
+132,Android,3-4,25-30,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,6001-8000 zł,"Praca na pół etatu, Student"
+131,Android,3-4,51-55,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,1,6001-8000 zł,Praca na pełen etat
+130,Android,3-4,31-35,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,2,6001-8000 zł,Praca na pełen etat
+129,iOS,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,>10000 zł,Praca na pełen etat
+128,Android,5-6,36-40,Mężczyzna,Tytuł Magistra,Wolny/a,0,>10000 zł,Własny biznes
+127,Android,<1,41-45,Kobieta,Tytuł Magistra,Wolny/a,0,>10000 zł,Własny biznes
+126,Android,3-4,41-45,Mężczyzna,Tytuł Magistra,Po rozwodzie lub w separacji,2,>10000 zł,Praca na pełen etat
+125,Android,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,<2000 zł,"Praca na pół etatu, Student"
+124,Nie wiem,<1,45-50,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,"Praca na pół etatu, Własny biznes"
+123,Android,3-4,41-45,Kobieta,Tytuł Magistra,Związek nieformalny,1,8001-10000 zł,Własny biznes
+122,Android,3-4,45-50,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,1,6001-8000 zł,Praca na pełen etat
+121,Android,<1,45-50,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Własny biznes
+120,iOS,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,>10000 zł,Własny biznes
+119,Android,3-4,45-50,Kobieta,Tytuł Magistra,Żonaty/Zamężna,3,2001-4000 zł,Praca na pełen etat
+118,Android,1-2,36-40,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,0,4001-6000 zł,Praca na pełen etat
+117,Android,<1,45-50,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,4001-6000 zł,Własny biznes
+116,Android,1-2,31-35,Mężczyzna,Tytuł Magistra,Wolny/a,0,>10000 zł,Praca na pełen etat
+115,Android,5-6,36-40,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,1,>10000 zł,Własny biznes
+114,iOS,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,>10000 zł,Praca na pełen etat
+113,Android,3-4,51-55,Kobieta,Tytuł Magistra,Związek nieformalny,0,6001-8000 zł,Praca na pełen etat
+112,iOS,<1,56-60,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,0,>10000 zł,Własny biznes
+111,iOS,1-2,45-50,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,8001-10000 zł,Praca na pełen etat
+110,iOS,5-6,51-55,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+109,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,"Praca na pół etatu, Student"
+108,iOS,7-8,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,"Praca na pełen etat, Student"
+107,Android,3-4,51-55,Mężczyzna,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,3,>10000 zł,Praca na pełen etat
+106,Android,1-2,45-50,Kobieta,Tytuł Magistra,Związek nieformalny,1,4001-6000 zł,Praca na pełen etat
+105,Android,1-2,56-60,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,1,>10000 zł,Praca na pełen etat
+104,Android,1-2,45-50,Mężczyzna,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,2,4001-6000 zł,Praca na pełen etat
+103,Android,1-2,41-45,Kobieta,Tytuł Magistra,Związek nieformalny,2,>10000 zł,Praca na pełen etat
+102,iOS,>8,45-50,Mężczyzna,Tytuł Magistra,Związek nieformalny,0,>10000 zł,Praca na pełen etat
+101,iOS,3-4,45-50,Mężczyzna,Tytuł Magistra,Po rozwodzie lub w separacji,2,8001-10000 zł,Praca na pełen etat
+100,iOS,3-4,41-45,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+99,iOS,1-2,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,"Praca na pół etatu, Student"
+98,Android,3-4,41-45,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+97,iOS,3-4,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,2001-4000 zł,"Praca na pół etatu, Student"
+96,Android,3-4,41-45,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,8001-10000 zł,Praca na pełen etat
+95,iOS,5-6,25-30,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,0,6001-8000 zł,Praca na pełen etat
+94,iOS,5-6,25-30,Kobieta,Tytuł Magistra,Żonaty/Zamężna,0,6001-8000 zł,"Praca na pełen etat, Student"
+93,Android,<1,51-55,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,1,>10000 zł,Praca na pełen etat
+92,iOS,3-4,25-30,Kobieta,Stopień naukowy Doktor,Żonaty/Zamężna,0,>10000 zł,Praca na pełen etat
+91,Android,3-4,41-45,Mężczyzna,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,0,>10000 zł,Praca na pełen etat
+90,iOS,5-6,25-30,Mężczyzna,Tytuł Magistra,Związek nieformalny,0,>10000 zł,Praca na pełen etat
+89,iOS,>8,25-30,Kobieta,Tytuł Magistra,Związek nieformalny,0,4001-6000 zł,Praca na pełen etat
+88,Android,1-2,56-60,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,2,4001-6000 zł,Praca na pełen etat
+87,Android,1-2,36-40,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,3,>10000 zł,Praca na pełen etat
+86,Android,1-2,45-50,Kobieta,Tytuł Magistra,Żonaty/Zamężna,1,6001-8000 zł,Praca na pełen etat
+85,iOS,3-4,45-50,Kobieta,Stopień naukowy Doktor,Żonaty/Zamężna,2,>10000 zł,Własny biznes
+84,Android,<1,60-70,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,0,6001-8000 zł,Praca na pełen etat
+83,Android,1-2,60-70,Kobieta,Tytuł Magistra,Żonaty/Zamężna,0,4001-6000 zł,Własny biznes
+82,Android,<1,60-70,Kobieta,Tytuł Inżyniera/Licencjat,Po rozwodzie lub w separacji,1,4001-6000 zł,Praca na pełen etat
+81,Android,3-4,18-24,Mężczyzna,Wykształcenie średnie,Wolny/a,0,<2000 zł,Student
+80,Android,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,Student
+79,Android,3-4,51-55,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,2,6001-8000 zł,Praca na pełen etat
+78,Android,1-2,56-60,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,1,4001-6000 zł,Praca na pełen etat
+77,Android,3-4,31-35,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,>10000 zł,Własny biznes
+76,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,0,>10000 zł,Własny biznes
+75,Android,>8,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,Praca na pełen etat
+74,Android,<1,45-50,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,1,>10000 zł,Praca na pełen etat
+73,iOS,1-2,25-30,Kobieta,Tytuł Magistra,Żonaty/Zamężna,0,>10000 zł,Praca na pełen etat
+72,Android,1-2,45-50,Kobieta,Tytuł Magistra,Żonaty/Zamężna,1,>10000 zł,"Praca na pełen etat, Własny biznes"
+71,Android,3-4,51-55,Kobieta,Tytuł Magistra,Żonaty/Zamężna,1,>10000 zł,Praca na pełen etat
+70,iOS,3-4,60-70,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+69,Android,3-4,56-60,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+68,Android,<1,51-55,Mężczyzna,Wykształcenie średnie,Żonaty/Zamężna,1,6001-8000 zł,Praca na pełen etat
+67,Android,3-4,45-50,Kobieta,Tytuł Magistra,Żonaty/Zamężna,2,2001-4000 zł,Praca na pół etatu
+66,Android,3-4,36-40,Kobieta,Tytuł Magistra,Żonaty/Zamężna,3,6001-8000 zł,Praca na pełen etat
+65,Android,3-4,25-30,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,>10000 zł,Praca na pełen etat
+64,iOS,3-4,18-24,Kobieta,Tytuł Magistra,Wolny/a,0,6001-8000 zł,Praca na pełen etat
+63,iOS,1-2,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,"Praca na pełen etat, Student"
+62,Android,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,"Praca na pełen etat, Student"
+61,Android,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,"Bezrobotny, Student"
+60,iOS,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,"Praca na pół etatu, Student"
+59,iOS,7-8,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,4001-6000 zł,Praca na pełen etat
+58,iOS,5-6,18-24,Kobieta,Wykształcenie średnie,Związek nieformalny,0,6001-8000 zł,"Student, Własny biznes"
+57,Android,1-2,25-30,Mężczyzna,Tytuł Magistra,Związek nieformalny,0,>10000 zł,Praca na pełen etat
+56,iOS,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,"Praca na pół etatu, Student"
+55,iOS,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,"Praca na pełen etat, Student, Własny biznes"
+54,Android,3-4,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,<2000 zł,Student
+53,Android,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,"Praca na pełen etat, Student"
+52,iOS,3-4,18-24,Kobieta,Tytuł Magistra,Związek nieformalny,0,2001-4000 zł,Student
+51,iOS,1-2,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,"Praca na pół etatu, Student"
+50,Android,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,"Praca na pół etatu, Student"
+49,Android,1-2,18-24,Mężczyzna,Wykształcenie średnie,Wolny/a,0,<2000 zł,"Student, Własny biznes"
+48,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,2001-4000 zł,Praca na pół etatu
+47,Android,3-4,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,Student
+46,iOS,5-6,18-24,Kobieta,Wykształcenie średnie,Wolny/a,0,<2000 zł,Praca na pół etatu
+45,iOS,5-6,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,<2000 zł,Student
+44,iOS,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,>10000 zł,Praca na pełen etat
+43,iOS,>8,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,6001-8000 zł,"Praca na pół etatu, Student"
+42,Android,1-2,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,2001-4000 zł,"Praca na pół etatu, Student"
+41,iOS,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,Praca na pełen etat
+40,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,8001-10000 zł,"Praca na pół etatu, Student"
+39,Android,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,"Praca na pół etatu, Student"
+38,iOS,3-4,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,1,4001-6000 zł,Praca na pełen etat
+37,iOS,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,4001-6000 zł,Student
+36,iOS,1-2,45-50,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,1,8001-10000 zł,Własny biznes
+35,iOS,5-6,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,Praca na pełen etat
+34,Android,1-2,31-35,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,0,6001-8000 zł,Praca na pełen etat
+33,iOS,3-4,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,6001-8000 zł,Praca na pełen etat
+32,Android,1-2,45-50,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,1,6001-8000 zł,Własny biznes
+31,iOS,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,6001-8000 zł,"Praca na pełen etat, Student"
+30,Android,5-6,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,<2000 zł,Bezrobotny
+29,Android,5-6,45-50,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+28,iOS,3-4,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Wolny/a,0,<2000 zł,Student
+27,Android,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,0,6001-8000 zł,Praca na pełen etat
+26,iOS,1-2,31-35,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,0,6001-8000 zł,Praca na pełen etat
+25,Android,3-4,31-35,Mężczyzna,Tytuł Magistra,Związek nieformalny,0,6001-8000 zł,Praca na pełen etat
+24,Android,5-6,25-30,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,0,8001-10000 zł,Praca na pełen etat
+23,iOS,5-6,31-35,Kobieta,Tytuł Magistra,Żonaty/Zamężna,0,>10000 zł,Praca na pełen etat
+22,Android,1-2,31-35,Mężczyzna,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,0,8001-10000 zł,Praca na pełen etat
+21,iOS,5-6,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,>10000 zł,"Praca na pełen etat, Student"
+20,iOS,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,"Praca na pełen etat, Student"
+19,iOS,3-4,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,2001-4000 zł,Student
+18,Android,5-6,25-30,Mężczyzna,Tytuł Magistra,Związek nieformalny,0,8001-10000 zł,"Praca na pełen etat, Własny biznes"
+17,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,>10000 zł,Praca na pełen etat
+16,iOS,3-4,18-24,Mężczyzna,Wykształcenie średnie,Związek nieformalny,0,6001-8000 zł,Praca na pełen etat
+15,iOS,1-2,51-55,Kobieta,Wykształcenie średnie,Żonaty/Zamężna,2,>10000 zł,Własny biznes
+14,iOS,<1,51-55,Mężczyzna,Tytuł Magistra,Żonaty/Zamężna,2,>10000 zł,Praca na pełen etat
+13,Nie wiem,3-4,18-24,Mężczyzna,Wykształcenie średnie,Wolny/a,0,2001-4000 zł,Student
+12,iOS,5-6,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,<2000 zł,Student
+11,Android,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Wolny/a,0,<2000 zł,Student
+10,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,8001-10000 zł,"Praca na pełen etat, Student"
+9,iOS,5-6,18-24,Kobieta,Wykształcenie średnie,Związek nieformalny,0,4001-6000 zł,Praca na pełen etat
+8,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,8001-10000 zł,"Praca na pełen etat, Student"
+7,iOS,3-4,18-24,Kobieta,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,0,2001-4000 zł,"Praca na pół etatu, Student, Własny biznes"
+6,iOS,1-2,18-24,Mężczyzna,Tytuł Magistra,Wolny/a,0,4001-6000 zł,Praca na pół etatu
+5,iOS,5-6,25-30,Kobieta,Stopień naukowy Doktor,Wolny/a,0,4001-6000 zł,Student
+4,iOS,3-4,41-45,Kobieta,Tytuł Inżyniera/Licencjat,Żonaty/Zamężna,2,>10000 zł,Bezrobotny
+3,Android,3-4,25-30,Kobieta,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,<2000 zł,"Bezrobotny, Student"
+2,Android,1-2,18-24,Mężczyzna,Tytuł Inżyniera/Licencjat,Związek nieformalny,0,4001-6000 zł,Student
+1,Android,5-6,18-24,Mężczyzna,Tytuł Magistra,Wolny/a,0,2001-4000 zł,Student
