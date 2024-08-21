@@ -21,11 +21,8 @@
 
 #   ---------  Import libraries part  ---------
 
-import numpy as np
 import pandas as pd
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
+
 
 
 def initialPrepareData(filename):
@@ -220,48 +217,3 @@ saveSegmentstoCSV(segments, segment_names)
 D1 = getDemographicalData(df)
 demographicToCSV(D1)
 
-
-## PCA ANALYSIS EXAMPLE BELOW
-
-# # To other file - Create standarization of segments and perform PCA on each segment
-# scaler = StandardScaler()
-# segment_scaled = scaler.fit_transform(segments[4].drop(columns='Consumer-ID'))
-
-# pca = PCA()
-# principal_components = pca.fit_transform(segment_scaled)
-# explained_variance = pca.explained_variance_ratio_
-
-# print(explained_variance)
-# cumulative_explained_variance = np.cumsum(explained_variance)
-
-
-# # Plotting explained variance
-# plt.figure(figsize=(10, 6))
-# plt.bar(range(1, len(explained_variance) + 1), explained_variance, alpha=0.5, align='center', label='Individual explained variance')
-# plt.step(range(1, len(cumulative_explained_variance) + 1), cumulative_explained_variance, where='mid', label='Cumulative explained variance')
-# plt.axhline(y=0.8, color='r', linestyle='-', label='80% explained variance')
-# plt.axhline(y=0.9, color='g', linestyle='-', label='90% explained variance')
-# plt.ylabel('Explained variance ratio')
-# plt.xlabel('Principal components')
-# plt.title('Explained Variance Plot')
-# plt.legend(loc='best')
-# plt.tight_layout()
-# plt.show()
-
-# # Step 4: Choose the number of components (for example, 3 for 80% variance)
-# n_components = 5
-# pca = PCA(n_components=n_components)
-# principal_components = pca.fit_transform(segment_scaled)
-
-# # Create a DataFrame from the principal components
-# df_reduced = pd.DataFrame(principal_components, columns=[f'PC{i+1}' for i in range(n_components)])
-# print(df_reduced.head())
-
-# # Visualize the first two principal components
-# plt.figure(figsize=(10, 6))
-# plt.scatter(df_reduced['PC1'], df_reduced['PC2'], alpha=0.7)
-# plt.xlabel('Principal Component 1')
-# plt.ylabel('Principal Component 2')
-# plt.title('PCA - PC1 vs PC2')
-# plt.grid(True)
-# plt.show()

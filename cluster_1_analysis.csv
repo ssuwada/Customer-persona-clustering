@@ -1,0 +1,47 @@
+,count,count,count,count,count,count,count,count
+Mężczyzna,58.0,,,,,,,
+Kobieta,32.0,,,,,,,
+Android,,54.0,,,,,,
+iOS,,35.0,,,,,,
+Nie wiem,,1.0,,,,,,
+3-4,,,37.0,,,,,
+1-2,,,26.0,,,,,
+5-6,,,14.0,,,,,
+<1,,,12.0,,,,,
+7-8,,,1.0,,,,,
+18-24,,,,32.0,,,,
+45-50,,,,15.0,,,,
+51-55,,,,12.0,,,,
+25-30,,,,11.0,,,,
+31-35,,,,7.0,,,,
+41-45,,,,5.0,,,,
+36-40,,,,3.0,,,,
+60-70,,,,3.0,,,,
+56-60,,,,2.0,,,,
+Tytuł Inżyniera/Licencjat,,,,,34.0,,,
+Tytuł Magistra,,,,,28.0,,,
+Wykształcenie średnie,,,,,24.0,,,
+Stopień naukowy Doktor,,,,,3.0,,,
+Wykształcenie podstawowe,,,,,1.0,,,
+Żonaty/Zamężna,,,,,,40.0,,
+Związek nieformalny,,,,,,26.0,,
+Wolny/a,,,,,,22.0,,
+Po rozwodzie lub w separacji,,,,,,2.0,,
+>10000 zł,,,,,,,33.0,
+4001-6000 zł,,,,,,,19.0,
+6001-8000 zł,,,,,,,13.0,
+8001-10000 zł,,,,,,,10.0,
+<2000 zł,,,,,,,9.0,
+2001-4000 zł,,,,,,,6.0,
+Praca na pełen etat,,,,,,,,46.0
+Własny biznes,,,,,,,,13.0
+Student,,,,,,,,10.0
+Praca na pół etatu,,,,,,,,7.0
+"Praca na pełen etat, Student",,,,,,,,5.0
+"Praca na pół etatu, Student",,,,,,,,3.0
+"Bezrobotny, Student",,,,,,,,1.0
+"Praca na pół etatu, Własny biznes",,,,,,,,1.0
+"Praca na pełen etat, Własny biznes",,,,,,,,1.0
+"Praca na pełen etat, Student, Własny biznes",,,,,,,,1.0
+"Student, Własny biznes",,,,,,,,1.0
+Bezrobotny,,,,,,,,1.0

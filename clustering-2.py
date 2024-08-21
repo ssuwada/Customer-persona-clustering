@@ -295,18 +295,18 @@ def combine_segments(segments, key='Consumer-ID'):
 
 def ThresholdPcaRetain_singleSegment(segment, thresholdExplainedVariance):
     
-        # Standardize the segment data
+    # Standardize data
     scaler = StandardScaler()
     segment_scaled = scaler.fit_transform(segment)
-        
-        # Perform PCA to obtain number of components to retain
+
+    # Perform PCA to get number of components to retain
     pca = PCA()
     princComponents = pca.fit_transform(segment_scaled)
         
-        # Calculate cumulative explained variance
+    # Calculate cumulative explained variance
     cumulative_explained_variance = pca.explained_variance_ratio_.cumsum()
         
-        # Determine the number of components to retain
+    # Determine the number of components to retain
     num_components = next(i for i, total_variance in enumerate(cumulative_explained_variance) if total_variance >= thresholdExplainedVariance) + 1
     print(len(segment))
     return num_components
@@ -426,7 +426,7 @@ segemtns = read_csvs(filename, 6)
 
 ### PART 1.3 ###
 # Create Vector - reductionVector what stores number of 90% components that can retain based on Cumulative Explained Variance
-reductionVector = ThresholdPcaRetain(segemtns, 0.9)
+# reductionVector = ThresholdPcaRetain(segemtns, 0.9)
 
 
 ### PART 1.4 ###
@@ -454,50 +454,55 @@ ColumnName='Cluster'
 
 combinedDF = combine_segments(segemtns, 'Consumer-ID')
 # print(combinedDF)
-# plot_elbow_df(combinedDF,10)
+plot_elbow_df(combinedDF,10)
 reductionNumber = ThresholdPcaRetain_singleSegment(combinedDF, 0.9)
-# print(reductionNumber)
+print(reductionNumber)
+silhouette_scoress(combinedDF, 10)
 
 ClusterinSingleSegment = cluster_segment(combinedDF, 2, ColumnName, reductionNumber)
 # print(ClusterinSingleSegment)
-# silhouette_scoress(combinedDF, 10)
+
+
 
 ### PART 3.1 - DBSCAN model for clusterin ###
 
 # PLOT K-DISTANCE
-features = combinedDF.drop(columns=['Consumer-ID'])
-reduced_features = apply_pca(features, reductionNumber)
+# features = combinedDF.drop(columns=['Consumer-ID'])
+# reduced_features = apply_pca(features, reductionNumber)
 # plot_k_distance(reduced_features, k=5)
 
 # dbscan_cluster(combinedDF, reductionNumber, 8.1, 5)
 
 ## DBSCAN IS NOT WORKING FOR THIS SPECYFIC SET OF DATA
 
+
+
 ### PART 4.1 - MEDOIDS CLUSTERING
 
 # medoids_cluster(combinedDF, 2, reductionNumber)
 
+
+
+
 ### PART 5.1 - HIERARCHICAL
 
-# HierdfCombined = hierarchical_cluster(combinedDF, 2, reductionNumber)
+HierdfCombined = hierarchical_cluster(combinedDF, 2, reductionNumber)
+
+
+
+##### EXPORT TO FILES ####
 
 # SORT VALUES AND EXPORT FOR HIERRARCHICAL
-
 # sorted_df = HierdfCombined.sort_values(by='Cluster', ascending=False)
 # print(sorted_df)
-
 # counts = sorted_df['Cluster'].value_counts()
 # print(counts)
-
 # sorted_df.to_csv(f'SORTED.csv', index=False)
 
 
 # CREATE SORTED FILE FOR KMEANS CLUSTERING
-
-sorted_df2 = ClusterinSingleSegment.sort_values(by='Cluster', ascending=False)
-print(sorted_df2)
-
-counts2 = sorted_df2['Cluster'].value_counts()
-print(counts2)
-
-sorted_df2.to_csv(f'SORTEDkmeans.csv', index=False)
+# sorted_df2 = ClusterinSingleSegment.sort_values(by='Cluster', ascending=False)
+# print(sorted_df2)
+# counts2 = sorted_df2['Cluster'].value_counts()
+# print(counts2)
+# sorted_df2.to_csv(f'SORTEDkmeans.csv', index=False)

@@ -58,6 +58,25 @@ def histogramPlot(data):
         plt.savefig(f'cluster_{cluster}_feature_distributions.png')
         plt.show()
 
+def plot_single_feature(data, cluster):
+
+    features = data.columns[1:-1]  # Exclude 'Consumer-ID' and 'Cluster'
+    clusterNumber = data[data['Cluster'] == cluster]
+
+    for feature in features:
+        plt.figure(figsize=(8, 6))
+        plt.hist(clusterNumber[feature], bins=10, edgecolor='k')
+        plt.title(f'Distribution of {feature}')
+        plt.xlabel(feature)
+        plt.ylabel('Frequency')
+        plt.grid(True)
+
+        # Save the plot to png
+        filename = f'cluster_{cluster}_{feature}_distribution.png'
+        plt.savefig(filename)
+        print(f'Saved {filename}')
+        
+        plt.close()  # Close the plots
 
 filename = '/Users/sebastiansuwada/Desktop/HTB/McsThesis/Code-Thesis/Customer-persona-clustering/SORTED.csv'
 sortedDf = readCSV(filename)
@@ -67,9 +86,12 @@ sortedDfKmeans = readCSV(filename)
 
 # print(sortedDf)
 # histogramPlot(sortedDf)
+# plot_single_feature(sortedDf, 1)
 
-print(sortedDfKmeans)
+# print(sortedDfKmeans)
 # histogramPlot(sortedDfKmeans)
+
+# plot_single_feature(0,'UI')
 
 # Remove 'Consumer-ID' and 'Cluster' columns
 data_prepared = sortedDf.drop(columns=['Consumer-ID', 'Cluster'])
@@ -81,4 +103,7 @@ sns.heatmap(data_normalized, cmap='coolwarm', cbar=True, yticklabels=sortedDf['C
 plt.title('Heatmap of Survey Responses')
 plt.xlabel('Questions')
 plt.ylabel('Respondents')
+
+# save heatmap with higher dpi
+plt.savefig('heatmap_survey_responses.png', dpi=300, bbox_inches='tight')
 plt.show()

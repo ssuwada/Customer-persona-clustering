@@ -32,29 +32,51 @@ def analyze_cluster(cluster_number, D1, hierr):
 
     cluster_df = merged_df[merged_df['Cluster'] == cluster_number]
     print(f"\nAnalysis for Cluster {cluster_number}:\n")
+
+    # Create a list to store clusters info
+    data = []
     
-    # Analyzing OS-Mobile distribution
-    values_count = cluster_df['OS-Mobile'].value_counts()
+    gender_count = cluster_df['Gender'].value_counts()
+    print("Gender:")
+    print(gender_count)
+    data.append(gender_count)
+
+    osmobile_count = cluster_df['OS-Mobile'].value_counts()
     print("OS-Mobile distribution:")
-    print(values_count)
+    print(osmobile_count)
+    data.append(osmobile_count)
 
-    value_counts = cluster_df['Mobile-time'].value_counts()
-    print(value_counts)
+    mobileTime_count = cluster_df['Mobile-time'].value_counts()
+    print(mobileTime_count)
+    data.append(mobileTime_count)
 
-    value_counts = cluster_df['Age'].value_counts()
-    print(value_counts)
+    age_count = cluster_df['Age'].value_counts()
+    print(age_count)
+    data.append(age_count)
 
-    value_counts = cluster_df['Education-level'].value_counts()
-    print(value_counts)
+    education_count = cluster_df['Education-level'].value_counts()
+    print(education_count)
+    data.append(education_count)
 
-    value_counts = cluster_df['Maritial-status'].value_counts()
-    print(value_counts)
+    martial_count = cluster_df['Maritial-status'].value_counts()
+    print(martial_count)
+    data.append(martial_count)
 
-    value_counts = cluster_df['Income'].value_counts()
-    print(value_counts)
+    income_count = cluster_df['Income'].value_counts()
+    print(income_count)
+    data.append(income_count)
 
-    value_counts = cluster_df['Work-status'].value_counts()
-    print(value_counts)
+    workStatus_count = cluster_df['Work-status'].value_counts()
+    print(workStatus_count)
+    data.append(workStatus_count)
+
+    # Make it dataframe
+    dataClusterDF = pd.concat(data, axis=1)
+
+    # Save the DataFrame to a CSV file
+    output_file = f'cluster_{cluster_number}_analysis.csv'
+    dataClusterDF.to_csv(output_file)
+
 
 # Function to append data to summary_dict
 def append_summary(feature, value_counts, summary_dict, total_respondents):
@@ -101,7 +123,7 @@ filename = '/Users/sebastiansuwada/Desktop/HTB/McsThesis/Code-Thesis/Customer-pe
 hierr = readCSV(filename) #upload clustered data
 
 
-# analyze_cluster(1, D1, hierr)
+analyze_cluster(1, D1, hierr)
 analyze_demographics(D1)
 
 
